@@ -19,6 +19,30 @@ if %sider% GEQ 32 (
             )
         )
     ) else (
-        echo "Error Sider Not Supported :("
+        if %sider% GEQ 22 (
+            for /L %%x in (0,1,3) do (
+                for /L %%y in (1,1,254) do (
+                    set ip=%base_ip%.%%x.%%y
+                    ping -n 1 !ip! > nul
+                    if !errorlevel! EQU 0 (
+                        echo !ip! is UP
+                    )
+                )
+            )
+        ) else (
+            if %sider% GEQ 16 (
+                for /L %%x in (1,1,254) do (
+                    for /L %%y in (1,1,254) do (
+                        set ip=%base_ip%.%%x.%%y
+                        ping -n 1 !ip! > nul
+                        if !errorlevel! EQU 0 (
+                            echo !ip! is UP
+                        )
+                    )
+                )
+            ) else (
+                echo "Error Sider Not Supported :("
+            )
+        )
     )
 )
