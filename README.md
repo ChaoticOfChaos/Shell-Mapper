@@ -42,12 +42,12 @@ Execute:
 
 And Pass The Arguments (Single Target):
 ```sh
-IP Base > 172.30.0.1
-Sider > 32
+IP Base > 172.30
+Sider > 22
 ```
 
 (Multi Target):
 ```sh
-IP Base > 172.30.0
-Sider > 24
+IP Base > 172.30
+Sider > 16
 ```
