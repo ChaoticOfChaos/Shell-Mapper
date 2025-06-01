@@ -1,4 +1,6 @@
 #!/bin/bash
+clear
+echo "__________Shell_Mapper__________"
 
 read -p "IP Base > " ip_base
 read -p "Sider > " sider
